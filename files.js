@@ -1,6 +1,16 @@
 const fs = require('fs');
 
+fs.readFile('./docs/blog.txt', (err, data) => {
+  if (err) {
+    console.log(err);
+  }
+  console.log(data.toString());
+});
+
+
 // reading files
+
+/*
 fs.readFile('./docs/blog.txt', (err, data) => {
   if (err) {
     console.log(err);
@@ -9,6 +19,7 @@ fs.readFile('./docs/blog.txt', (err, data) => {
 });
 
 // console.log('last line');
+*/
 
 // writing files
 fs.writeFile('./docs/blog.txt', 'hello, world', () => {
@@ -45,3 +56,4 @@ if (fs.existsSync('./docs/deleteme.txt')) {
     console.log('file deleted');
   });
 }
+
